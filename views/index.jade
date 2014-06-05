@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  hr
+  form(action='/', method='POST', name='mail_form')
+    div
+      p name:
+      input(type='text', name='name', placeholder='name', required)
+      p content:
+      textarea(name='content', placeholder='content', required)
+      p
+        input(type='submit', value='submit')
